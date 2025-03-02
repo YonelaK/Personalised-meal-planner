@@ -14,7 +14,7 @@ The project is built using **Mermaid** for visual diagrams, and its codebase is 
 ## Project Structure
 - **`ReadMe.md`**: This file provides an overview of the project.
 - **[specification.md](./specification.md)**: Contains detailed project specifications, including user stories and system requirements.
-- **[architecture.md](./architecture.md)**: Describes the overall architecture of the app, including the technical stack and flow of data.
+- **[[architecture.md](./architecture.md)](https://github.com/YonelaK/Personalised-meal-planner/blob/main/ARCHITECTURE.md)**: Describes the overall architecture of the app, including the technical stack and flow of data.
 
 ## Technologies Used
 - **Mermaid**: For creating visual diagrams and flowcharts.
