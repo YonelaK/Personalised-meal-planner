@@ -1,100 +1,105 @@
 # Architecture of the Personalised Meal Planner
 
 ## Overview
-
 The Personalised Meal Planner is designed to provide users with customized meal plans based on their preferences. The system consists of a web/mobile application, a backend API, and integrations with external services like a recipe provider and a payment gateway.
-
 ## Domain
-
 Health and nutrition
-
-
+## Problem Statement
+Many individuals struggle with meal planning due to time constraints, lack of nutritional knowledge, or dietary restrictions. The **Personalised Meal Planner** aims to simplify this process by generating customized meal plans based on user preferences, dietary goals, and health conditions. The system will integrate external recipe APIs and provide a subscription-based model for premium features.
+## System Architecture 
+The system is structured into **four main components**:
+1. **Frontend (Web & Mobile Application)**
+2. **Backend API**
+3. **Database**
+4. **External Services** (Recipe API, Payment Gateway)
 ## C4 Model
 
 ### **Context Diagram (C4 Level 1)**
 
 ```mermaid
 C4Context
-  title Personalised Meal Planner - System Context
+  title Personalized Meal Planner - System Context
 
-  Person(user, "User", "A person who wants to plan meals based on preferences")
-  System(mealPlanner, "Personalised Meal Planner", "Helps users create customized meal plans")
-  System_Ext(api, "External Recipe API", "Provides recipe recommendations")
-  System_Ext(paymentGateway, "Payment Gateway", "Processes subscription payments")
+  Person(user, "User\n(Plans meals)")
+  System(mealPlanner, "Personalized Meal Planner\n(Manages meal plans)")
+  System_Ext(recipeAPI, "Recipe API\n(Provides meal ideas)")
+  System_Ext(paymentGateway, "Payment Gateway\n(Handles payments)")
 
-  Rel(user, mealPlanner, "Uses", "Web/Mobile App")
-  Rel(mealPlanner, api, "Fetches meal suggestions from", "REST API")
-  Rel(mealPlanner, paymentGateway, "Processes payments via", "Secure API")
+  Rel(user, mealPlanner, "Uses app")
+  Rel(mealPlanner, recipeAPI, "Fetches meals")
+  Rel(mealPlanner, paymentGateway, "Processes payments")
 ```
 
 ### **Container Diagram (C4 Level 2)**
 
 ```mermaid
 C4Container
-  title Personalised Meal Planner - Container Diagram
+  title Personalized Meal Planner - Containers
 
-  Person(user, "User", "Plans meals and manages preferences")
-  System_Boundary(mealPlanner, "Personalised Meal Planner") {
-    Container(webApp, "Web/Mobile App", "Allows users to interact with the planner")
-    Container(apiService, "Backend API", "Handles business logic and data processing")
-    Container(database, "Database", "Stores user preferences and meal plans")
+  Person(user, "User\n(Plans meals)")
+  System_Boundary(mealPlanner, "Personalized Meal Planner") {
+    Container(webApp, "Web/Mobile App\n(User interface)")
+    Container(apiService, "Backend API\n(Processes requests)")
+    Container(database, "Database\n(Stores user & meal data)")
   }
 
-  System_Ext(recipeAPI, "External Recipe API", "Provides meal suggestions")
-  System_Ext(paymentGateway, "Payment Gateway", "Handles payments")
+  System_Ext(recipeAPI, "Recipe API\n(Meal data provider)")
+  System_Ext(paymentGateway, "Payment Gateway\n(Handles payments)")
 
-  Rel(user, webApp, "Uses", "HTTPS")
-  Rel(webApp, apiService, "Sends requests to", "REST API")
-  Rel(apiService, database, "Reads/Writes data to", "SQL/NoSQL")
-  Rel(apiService, recipeAPI, "Fetches meal plans from", "External API")
-  Rel(apiService, paymentGateway, "Processes payments through", "Secure API")
+  Rel(user, webApp, "Uses")
+  Rel(webApp, apiService, "Requests data from")
+  Rel(apiService, database, "Stores and retrieves")
+  Rel(apiService, recipeAPI, "Fetches meal plans from")
+  Rel(apiService, paymentGateway, "Processes transactions via")
 ```
 
 ### **Component Diagram (C4 Level 3)**
 
 ```mermaid
 C4Component
-  title Personalised Meal Planner - Component Diagram (Backend API)
+  title Personalized Meal Planner - Components
 
   Container_Boundary(apiService, "Backend API") {
-    Component(authService, "Auth Service", "Handles user authentication and sessions")
-    Component(mealService, "Meal Planning Service", "Generates personalized meal plans")
-    Component(paymentService, "Payment Service", "Processes payments securely")
-    Component(dataAccess, "Database Access Layer", "Handles database operations")
+    Component(authService, "Auth Service\n(Authentication & Login)")
+    Component(mealService, "Meal Service\n(Creates meal plans)")
+    Component(paymentService, "Payment Service\n(Handles payments)")
+    Component(dataAccess, "Database Layer\n(Read/Write data)")
   }
 
-  System_Ext(recipeAPI, "External Recipe API", "Provides meal data")
-  System_Ext(paymentGateway, "Payment Gateway", "Handles transactions")
+  System_Ext(recipeAPI, "Recipe API\n(Food suggestions)")
+  System_Ext(paymentGateway, "Payment Gateway\n(Transaction processing)")
 
-  Rel(authService, dataAccess, "Stores/Retrieves user data from")
-  Rel(mealService, recipeAPI, "Fetches meal recommendations from")
-  Rel(paymentService, paymentGateway, "Processes payments through")
+  Rel(authService, dataAccess, "Reads/writes user data")
+  Rel(mealService, recipeAPI, "Requests meal plans")
+  Rel(paymentService, paymentGateway, "Processes payments")
 ```
 
 ### **Code-Level Diagram (C4 Level 4)**
 
 ```mermaid
-C4Container
-  title Personalised Meal Planner - Code-Level (Backend API)
-
+C4Component
+  title Personalised Meal Planner - Code Level (Backend API)
+  
   Container_Boundary(apiService, "Backend API") {
-    Component(authService, "Auth Service", "Handles user authentication and sessions")  
-    Component(userController, "User Controller", "Manages user-related operations")
-    Component(mealService, "Meal Planning Service", "Generates personalized meal plans")
-    Component(paymentService, "Payment Service", "Processes payments securely")
-    Component(dataAccess, "Database Access Layer", "Handles database operations")
-    Component(notificationService, "Notification Service", "Sends meal plan notifications")
+    Component(userController, "User Controller\n(Handles user operations)")
+    Component(authService, "Auth Service\n(Login & Sessions)")
+    Component(mealService, "Meal Service\n(Creates meal plans)")
+    Component(paymentService, "Payment Service\n(Processes payments)")
+    Component(notificationService, "Notification Service\n(Sends meal alerts)")
+    Component(dataAccess, "Database Layer\n(Read/Write data)")
   }
 
-  System_Ext(recipeAPI, "External Recipe API", "Provides meal data")
-  System_Ext(paymentGateway, "Payment Gateway", "Handles transactions")
+  System_Ext(recipeAPI, "Recipe API\n(Provides meal data)")
+  System_Ext(paymentGateway, "Payment Gateway\n(Transaction processing)")
 
-  Rel(userController, authService, "Authenticates users using")
-  Rel(userController, mealService, "Requests meal plans from")
-  Rel(userController, paymentService, "Initiates transactions via")
-  Rel(mealService, dataAccess, "Reads/Writes meal plans in")
-  Rel(paymentService, paymentGateway, "Processes payments through")
-  Rel(notificationService, userController, "Sends meal notifications to users")
+  Rel_L(userController, authService, "Authenticates users via")
+  Rel_R(userController, mealService, "Requests meal plans from")
+  Rel_D(userController, paymentService, "Initiates transactions via")
+  Rel_D(mealService, dataAccess, "Stores/retrieves meal plans in")
+  Rel_U(paymentService, paymentGateway, "Handles payments through")
+  Rel_L(notificationService, userController, "Sends meal alerts to users")
+
+
 ```
 
 ### **UML-Class Diagram Alternative**
