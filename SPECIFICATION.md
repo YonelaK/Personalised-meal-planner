@@ -33,7 +33,7 @@ The **Personalised Meal Planner** is a web/mobile application designed to help u
 ## System Requirements
 
 ### **Functional Requirements**
-1. Users must be able to register, log in, and manage their profile.
+1. Users must be able to register, log in, and manage their profiles.
 2. The system should generate personalized meal plans based on user input.
 3. Users must have access to recipe details, including ingredients and nutritional value.
 4. The application should support payment processing for premium features.
