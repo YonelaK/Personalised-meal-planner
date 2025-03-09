@@ -30,6 +30,27 @@
 - The system should be accessible on both desktop and mobile devices.
 - Acceptance Criteria: The UI should be fully responsive and useable across all major devices.
 
+## 2. Non-functional Requirements
+
+1. **Usability**
+- The system must meet Web Content Accessibility Guidelines (WCAG) 2.2 accessibility standards to provide usability for all users.
+
+ 2. **Deployability**
+- The system must be deployable on Windows, Linux, and Cloud platforms.
+
+ 3. **Maintainability**
+- System documentation should include API guidelines and development documentation for easy changes.
+
+ 4. **Scalability**
+- The system should support at least 1,000 concurrent users during peak hours without compromising performance.
+
+ 5. **Security**
+- All user data must be secured with AES-256.
+- The system must enable multi-factor authentication (MFA).
+
+ 6. **Performance**
+- Search results should load within 2 seconds.
+- The system must respond to user interactions within 1 second.
 
 
 
