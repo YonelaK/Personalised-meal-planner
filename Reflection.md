@@ -22,7 +22,7 @@
 2. **User Testing & Feedback** - Conducted early usability testing to refine the UI while maintaining security standards.
 3. **Incremental Updates** -Adopted Agile to allow for continuous improvement based on stakeholder feedback.
 
-***These strategies helped align stakeholder needs with project feasibility while maintaining system quality and usability.***
+
 
 
 
