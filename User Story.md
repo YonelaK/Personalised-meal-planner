@@ -1,3 +1,5 @@
+### User Stories
+
 | Story ID | User Story | Acceptance Criteria | Priority (High/Medium/Low) |
 |----------|-----------|---------------------|----------------------------|
 | US-001 | As a new user, I want to register with my email and password so that I can access personalized meal planning features. | - Users must receive a confirmation email after registration<br>- Email format must be validated<br>- Password must meet security requirements | High |
