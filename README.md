@@ -20,3 +20,33 @@ The project is built using **Mermaid** for visual diagrams, and its codebase is 
 - **Mermaid**: For creating visual diagrams and flowcharts.
 - **JavaScript, HTML, and CSS**: Frontend development for building the interactive web app.
 - **GitHub**: For version control and collaboration.
+
+## Project Kanban Board Configuration
+
+### Workflow Customization
+Our Kanban board extends the standard Iterative Development template to include:
+- **Requirements Validation**: Ensures user stories meet acceptance criteria
+- **Deployment Staging**: Provides environment-specific testing and verification
+
+### Column Purpose
+1. **Backlog**: Unprocessed user stories and tasks
+2. **Sprint Planning**: Stories selected for upcoming sprint
+3. **Requirements Validation**: Verify story details and acceptance criteria
+4. **Development**: Active implementation of user stories
+5. **Code Review**: Peer review and quality assurance
+6. **Testing**: Comprehensive testing phase
+7. **Deployment Staging**: Pre-production verification
+8. **Done**: Completed and deployed stories
+
+### Labeling Strategy
+- `epic`: Large, complex user stories
+- `feature`: New functionality additions
+- `bug`: Identified defects
+- `enhancement`: Improvements to existing features
+- `documentation`: Documentation-related tasks
+- `high-priority`: Critical items requiring immediate attention
+
+### Workflow Rules
+- All stories must pass Requirements Validation
+- Minimum of one peer review required
+- Deployment Staging mandatory before marking as Done
