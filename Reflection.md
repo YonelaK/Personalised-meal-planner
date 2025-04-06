@@ -153,3 +153,29 @@ Going forward, I will focus on improving my familiarity with project management 
 - Choose tools that enhance, not complicate, collaboration
 
 
+### Lesson Learnt from Assignment 8
+
+* Understanding System Workflows and Object States
+  
+This assignment provided valuable insights into the importance of understanding system workflows and object states in software development. Through creating activity diagrams and state transition diagrams, I gained a deeper understanding of how different components of a system interact with each other and how they change state in response to various events.
+
+### Key Takeaways
+* Importance of Visual Modeling: Visual modeling using diagrams such as activity diagrams and state transition diagrams is essential in understanding complex system workflows and object states. It helps to identify potential issues and improve the overall design of the system.
+  
+* System Workflows are Interconnected: System workflows are interconnected, and changes to one workflow can impact others. 
+* Understanding these relationships is crucial in designing a cohesive and efficient system.
+* Object States are Dynamic: Object states are dynamic and can change in response to various events. Understanding these state changes is essential in designing a system that can adapt to different scenarios.
+* Guard Conditions are Crucial: Guard conditions play a critical role in ensuring that transitions between states are valid and consistent. They help to prevent errors and ensure that the system behaves as expected.
+  
+* Functional Requirements are Key: Functional requirements are essential in guiding the design of system workflows and object states. They help to ensure that the system meets the needs of its users and stakeholders.
+Skills Developed
+
+* Analytical Skills: This assignment helped me develop my analytical skills, which are essential in understanding complex system workflows and object states.
+* Problem-Solving Skills: By creating activity diagrams and state transition diagrams, I developed my problem-solving skills, which are critical in designing efficient and effective systems.
+* Communication Skills: This assignment helped me develop my communication skills, which are essential in conveying complex system designs to stakeholders and team members.
+### Application in Future Projects
+
+* The skills and knowledge gained from this assignment will be applied in future projects to:
+* Improve System Design: By applying the principles of visual modeling and understanding system workflows and object states, I will be able to design more efficient and effective systems.
+* Enhance Problem-Solving Skills: The problem-solving skills developed in this assignment will be applied to tackle complex system design challenges in future projects.
+* Communicate Complex Designs: The communication skills developed in this assignment will be used to convey complex system designs to stakeholders and team members, ensuring that everyone is on the same page.
