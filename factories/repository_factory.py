@@ -45,3 +45,22 @@ class RepositoryFactory:
     def get_meal_plan_repository(cls, storage_type: str = 'memory') -> MealPlanRepository:
         """Convenience method for meal plan repositories"""
         return cls.get_repository('meal_plan', storage_type)
+
+# Add this to your existing RepositoryFactory class
+_STORAGE_TYPES = {
+    'memory': {
+        'meal_plan': InMemoryMealPlanRepository,
+        'user': InMemoryUserRepository
+    },
+    'database': {  # New storage type
+        'meal_plan': DatabaseMealPlanRepository,
+        # 'user': DatabaseUserRepository  # Add when implemented
+    }
+}
+
+# Optional: Add database configuration method
+@classmethod
+def configure_database(cls, connection_string: str):
+    """Future method to configure database connections"""
+    cls._db_connection = connection_string
+    print(f"Database configured (Not fully implemented yet)")
