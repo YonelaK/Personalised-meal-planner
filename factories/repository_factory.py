@@ -40,13 +40,13 @@ class RepositoryFactory:
                 f"Unsupported combination: entity={entity_type}, storage={storage_type}"
             )
 
-    # Alternative simplified version (if you only need meal plans):
+   
     @classmethod
     def get_meal_plan_repository(cls, storage_type: str = 'memory') -> MealPlanRepository:
         """Convenience method for meal plan repositories"""
         return cls.get_repository('meal_plan', storage_type)
 
-# Add this to your existing RepositoryFactory class
+
 _STORAGE_TYPES = {
     'memory': {
         'meal_plan': InMemoryMealPlanRepository,
@@ -58,7 +58,7 @@ _STORAGE_TYPES = {
     }
 }
 
-# Optional: Add database configuration method
+
 @classmethod
 def configure_database(cls, connection_string: str):
     """Future method to configure database connections"""
