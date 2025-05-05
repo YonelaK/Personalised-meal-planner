@@ -1,0 +1,46 @@
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
+
+public class BookServiceTest {
+
+    @Test
+    public void testCheckoutBookSuccessfully() {
+        BookRepository mockRepo = mock(BookRepository.class);
+        Book book = new Book("1", "Sample Book");
+        when(mockRepo.findById("1")).thenReturn(Optional.of(book));
+        when(mockRepo.save(any(Book.class))).thenReturn(book);
+
+        BookService service = new BookService(mockRepo);
+        Book result = service.checkoutBook("1");
+
+        assertTrue(result.isCheckedOut());
+        verify(mockRepo).save(book);
+    }
+
+    @Test
+    public void testBookNotFound() {
+        BookRepository mockRepo = mock(BookRepository.class);
+        when(mockRepo.findById("2")).thenReturn(Optional.empty());
+
+        BookService service = new BookService(mockRepo);
+
+        assertThrows(BookNotFoundException.class, () -> {
+            service.checkoutBook("2");
+        });
+    }
+
+    @Test
+    public void testBookAlreadyCheckedOut() {
+        BookRepository mockRepo = mock(BookRepository.class);
+        Book book = new Book("3", "Checked Out Book");
+        book.checkOut(); // simulate already checked out
+        when(mockRepo.findById("3")).thenReturn(Optional.of(book));
+
+        BookService service = new BookService(mockRepo);
+
+        assertThrows(BookAlreadyCheckedOutException.class, () -> {
+            service.checkoutBook("3");
+        });
+    }
+}
