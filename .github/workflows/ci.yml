@@ -27,3 +27,4 @@ jobs:
     - name: Run tests
       run: |
         pytest
+"homepage": "https://<YonelaK>.github.io/<Personalised-meal-planner>", "scripts": { "predeploy": "npm run build", "deploy": "gh-pages -d build" }
