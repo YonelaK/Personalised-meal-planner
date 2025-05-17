@@ -9,4 +9,3 @@ class User:
 
     def view_shopping_list(self):
         return ShoppingList(self._id)
-

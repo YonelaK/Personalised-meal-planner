@@ -1,5 +1,6 @@
 # builder.py
 
+
 class Meal:
     def __init__(self):
         self.main = None
@@ -8,6 +9,7 @@ class Meal:
 
     def __str__(self):
         return f"Main: {self.main}, Side: {self.side}, Drink: {self.drink}"
+
 
 class MealBuilder:
     def __init__(self):

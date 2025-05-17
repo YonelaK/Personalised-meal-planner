@@ -3,6 +3,7 @@ from datetime import date
 from typing import List, Optional
 import uuid
 
+
 @dataclass
 class MealPlan:
     user_id: str

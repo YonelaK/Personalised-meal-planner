@@ -1,5 +1,6 @@
 # singleton.py
 
+
 class DatabaseConnection:
     _instance = None
 

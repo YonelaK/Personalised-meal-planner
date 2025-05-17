@@ -2,9 +2,11 @@
 
 import copy
 
+
 class MealPrototype:
     def clone(self):
         return copy.deepcopy(self)
+
 
 class VegMeal(MealPrototype):
     def __init__(self):
@@ -13,6 +15,7 @@ class VegMeal(MealPrototype):
 
     def __str__(self):
         return f"{self.type} Meal: {', '.join(self.items)}"
+
 
 class NonVegMeal(MealPrototype):
     def __init__(self):

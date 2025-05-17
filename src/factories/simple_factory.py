@@ -3,6 +3,7 @@ from src.ingredient import Ingredient
 from src.meal_plan import MealPlan
 from datetime import date
 
+
 class SimpleFactory:
     @staticmethod
     def create_recipe(id, name, instructions):

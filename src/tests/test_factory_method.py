@@ -4,6 +4,7 @@ from factories.factory_method import MealFactory
 from src.vegetarian_meal import VegetarianMeal
 from src.non_vegetarian_meal import NonVegetarianMeal
 
+
 class TestFactoryMethod(unittest.TestCase):
 
     def setUp(self):
@@ -20,6 +21,7 @@ class TestFactoryMethod(unittest.TestCase):
     def test_invalid_meal_type(self):
         with self.assertRaises(ValueError):
             self.factory.create_meal("vegan")
+
 
 if __name__ == "__main__":
     unittest.main()

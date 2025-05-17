@@ -3,6 +3,7 @@
 import unittest
 from creational_patterns.builder import MealBuilder
 
+
 class TestBuilder(unittest.TestCase):
     def test_meal_builder(self):
         builder = MealBuilder()
@@ -10,6 +11,7 @@ class TestBuilder(unittest.TestCase):
         self.assertEqual(meal.main, "Burger")
         self.assertEqual(meal.side, "Fries")
         self.assertEqual(meal.drink, "Cola")
+
 
 if __name__ == "__main__":
     unittest.main()
