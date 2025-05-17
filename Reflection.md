@@ -224,3 +224,15 @@ Skills Developed
 
 * Overall, the process of designing and refining both the domain model and the class diagram was a vital exercise in applying theoretical knowledge to a real-world system. It improved my confidence in modeling, clarified my understanding of relationships and responsibilities, and highlighted the importance of aligning structural models with functional requirements.
 
+# Reflection on Open-Source Collaboration Experience
+
+During this assignment, I improved my repository significantly by preparing it for external contributors and undergoing peer review. I created clear and detailed documentation, including a CONTRIBUTING.md with setup instructions, coding standards, and pull request guidelines. I also added a roadmap and labeled issues to help newcomers pick tasks easily. This improved the clarity and usability of the repository, making it easier for contributors to onboard and participate.
+
+The peer feedback helped me identify areas where the documentation could be clearer and encouraged me to ensure consistent issue labeling and better communication of project goals. This iterative feedback loop gave me a real-world experience of managing open-source projects and the importance of transparency and guidance for contributors.
+
+One of the main challenges in onboarding contributors was anticipating the questions and confusion newcomers might face. It required me to think from their perspective and provide comprehensive instructions. Labeling issues appropriately also took time, as I needed to ensure tasks were suitable for first-time contributors without overwhelming them.
+
+Through this process, I learned valuable lessons about open-source collaboration. Clear documentation and structured contribution guidelines are essential to encourage participation and maintain project quality. The process of peer review also highlighted the community aspect of open-source work — collaboration and feedback drive continuous improvement.
+
+Overall, this assignment enhanced my understanding of project management and collaboration in open-source environments, which are crucial skills for professional software development.
+
