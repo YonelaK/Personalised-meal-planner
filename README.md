@@ -75,3 +75,24 @@ found = repo.find_by_id(saved.id)
 
 ### Class Diagram
 See [docs/class_diagram.md](docs/class_diagram.md)
+
+# Personalised Meal Planner
+
+[Short project description]
+
+## Getting Started
+
+[Setup instructions, prerequisites, installation, how to run]
+
+## Features for Contribution
+
+| Feature              | Description                         | Difficulty          | Labels            |
+|----------------------|-----------------------------------|---------------------|-------------------|
+| User Authentication  | Implement login/logout system      | Medium              | good-first-issue  |
+| Meal Preferences     | Save and update meal choices       | Easy                | good-first-issue  |
+| Calorie Calculator   | Add calorie tracking feature       | Medium              | feature-request   |
+| Recipe Search        | Improve search algorithm           | Hard                | feature-request   |
+| UI Enhancements      | Improve front-end design           | Easy                | good-first-issue  |
+
+## Other existing sections (if any)
+
